@@ -1,6 +1,8 @@
 
 from pathlib import Path
 
+BASE_DIR = Path(__file__).resolve().parent
+
 # Project name
 project_name = "turbofan_predictive_maintenance"
 
@@ -123,31 +125,24 @@ list_of_files = [
 
 
 def create_directories():
-    """Create all project directories."""
-
     for directory in directories:
-        Path(directory).mkdir(parents=True, exist_ok=True)
-        print(f"Directory created/verified: {directory}")
+        path = BASE_DIR / directory
+        path.mkdir(parents=True, exist_ok=True)
+        print(f"Directory created/verified: {path}")
 
 
 def create_files():
-    """Create project files without overwriting existing content."""
-
     for filepath in list_of_files:
 
-        path = Path(filepath)
+        path = BASE_DIR / filepath
 
-        # Create parent directories
         path.parent.mkdir(parents=True, exist_ok=True)
 
-        # Create file only if it does not exist
         if not path.exists():
             path.touch()
             print(f"Created: {path}")
-
         else:
             print(f"Already exists: {path}")
-
 
 if __name__ == "__main__":
 

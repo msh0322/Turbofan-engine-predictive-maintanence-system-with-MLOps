@@ -1,0 +1,54 @@
+
+# Data processing
+numpy
+pandas
+scipy
+
+# Machine Learning
+scikit-learn
+xgboost
+
+# Visualization
+matplotlib
+seaborn
+
+# API development
+fastapi
+uvicorn
+
+# Experiment tracking
+mlflow
+
+# Data validation
+evidently==0.7.23
+
+# Database
+pymongo
+
+# Configuration and utilities
+python-dotenv
+PyYAML
+joblib
+
+# Development
+ipykernel
+jupyter
+ipykernel
+plotly
+imblearn
+catboost
+from_root
+dill
+neuro_mf
+boto3
+mypy-boto3-s3
+botocore
+jinja2
+python-multipart
+-r requirements/base.txt
+-r requirements/training.txt
+-r requirements/api.txt
+-r requirements/dashboard.txt
+-r requirements/dev.txt
+
+-e .python -m pip install -r requirements.txt
