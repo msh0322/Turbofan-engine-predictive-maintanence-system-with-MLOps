@@ -51,4 +51,4 @@ python-multipart
 -r requirements/dashboard.txt
 -r requirements/dev.txt
 
--e .python -m pip install -r requirements.txt
+-e .
